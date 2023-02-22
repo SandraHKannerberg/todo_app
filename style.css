@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Zeyada&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(#ff5757, #ffea54);
+  color: #ff5757;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 2rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Zeyada', cursive;
+  color: #feaa2b;
+  text-shadow: 1px 1px 2px black;
+}
+
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+button {
+  padding: 0.5rem;
+  border: none;
+  background: white;
+  font-size: 1rem;
+  height: 45px;
+}
+
+button {
+  font-size: 1.5rem;
+  color: #ff5757;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover{
+  background: #ff5757;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  width: 45%;
+  list-style: none;
+}
+
+.todo{
+  margin: 0.5rem;
+  background: white;
+  color: #ff5757;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li{
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  background: #ff5757;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn{
+  background: #feaa2b;
+}
+.complete-btn:hover{
+  background-color: rgb(12, 162, 12);
+}
+.trash-btn:hover{
+  background-color: red;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash-can,
+.fa-check {
+  pointer-events: none;
+} 
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select{
+  margin: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+select{
+  color:  #ff5757;
+  background: white;
+  width: 10rem;
+  height: 45px;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  background: #ff5757;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after{
+  background: white;
+  color: #ff5757;
+}
+
+/*Responsive design*/
+@media screen and (max-width: 1060px)  {
+  .todo-list {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 990px)  {
+  .todo-list {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px)  {
+  .todo-list {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 650px)  {
+  .todo-list {
+    min-width: 80%;
+  }
+}
+
+@media screen and (max-width: 570px)  {
+  .todo-list {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px)  {
+  header {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 420px)  {
+  .select {
+    margin-right: 0;
+  }
+}
